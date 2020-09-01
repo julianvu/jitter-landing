@@ -206,11 +206,11 @@
     </secion>
 
     <!-- BARISTAS -->
-    <section id="baristas">
+    <section id="baristas" class="py-5">
       <div class="container">
         <div class="row">
           <div class="col">
-            <h1 class="display-4 text-dark text-center py-5">Your Baristas</h1>
+            <h1 class="display-4 text-dark text-center">Your Baristas</h1>
           </div>
         </div>
       </div>
@@ -251,6 +251,60 @@
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h1 class="display-4 text-dark pb-3">
+              We'd love to hear your comments.
+            </h1>
+            <form>
+              <div class="input-group input-group-lg rounded-lg mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                </div>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="form-control"
+                  placeholder="Email"
+                />
+              </div>
+              <div class="input-group input-group-lg rounded-lg mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="fas fa-pencil-alt"></i>
+                  </span>
+                </div>
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="10"
+                  placeholder="Message"
+                  class="form-control"
+                ></textarea>
+              </div>
+              <input
+                type="submit"
+                value="Submit"
+                class="btn btn-primary shadow-lg btn-lg btn-block"
+              />
+            </form>
+          </div>
+          <div class="col-lg-6 d-flex align-items-center">
+            <img
+              src="img/comment.png"
+              alt=""
+              class="img-fluid d-none d-lg-block"
+            />
           </div>
         </div>
       </div>

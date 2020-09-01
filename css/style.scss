@@ -1,3 +1,4 @@
+$primary: #7d0633;
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap");
 @import "../scss/bootstrap.scss";
 
@@ -59,6 +60,13 @@ p.lead {
     .card-overlay {
       opacity: 1;
     }
+  }
+}
+
+#contact {
+  background: #e1cdb5;
+  textarea {
+    resize: none;
   }
 }
 
