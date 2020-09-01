@@ -10805,8 +10805,13 @@ body {
 }
 
 .jumbotron {
-  background-image: url("../img/coffee-shop-background.jpg");
+  overflow: hidden;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../img/coffee-shop-background.jpg");
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/coffee-shop-background.jpg");
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50vw;
 }
 
 p.lead {
@@ -10815,4 +10820,16 @@ p.lead {
 
 #about {
   background: #e2c391;
+}
+
+.crop {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 750px;
+}
+
+@media (max-width: 500px) {
+  .jumbotron h1 {
+    font-size: 2rem;
+  }
 }

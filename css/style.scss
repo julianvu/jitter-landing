@@ -2,18 +2,35 @@
 @import "../scss/bootstrap.scss";
 
 body {
-    font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .jumbotron {
-    background-image: url("../img/coffee-shop-background.jpg");
-    background-size: cover;
+  overflow: hidden;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../img/coffee-shop-background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50vw;
 }
 
 p.lead {
-    font-family: "Raleway", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 #about {
-    background: #e2c391;
+  background: #e2c391;
+}
+.crop {
+  object-fit: cover;
+  max-height: 750px;
+}
+
+@media (max-width: 500px) {
+  .jumbotron {
+    h1 {
+      font-size: 2rem;
+    }
+  }
 }
