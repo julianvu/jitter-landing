@@ -1,9 +1,10 @@
-$primary: #7d0633;
+$primary: #31112c;
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap");
 @import "../scss/bootstrap.scss";
 
 body {
   font-family: "Montserrat", sans-serif;
+  background: black;
 }
 
 .navbar {
@@ -13,6 +14,7 @@ body {
 }
 
 .jumbotron {
+  margin-top: 75px;
   overflow: hidden;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("../img/coffee-shop-background.jpg");
@@ -29,6 +31,11 @@ p.lead {
 #about {
   background: #e2c391;
 }
+
+#menu {
+  background: #ffffff;
+}
+
 .crop {
   object-fit: cover;
   max-height: 750px;
@@ -70,10 +77,16 @@ p.lead {
   }
 }
 
+footer {
+  a {
+    color: white;
+  }
+}
+
 @media (max-width: 500px) {
   .jumbotron {
     h1 {
-      font-size: 2rem;
+      font-size: 4rem;
     }
   }
 }

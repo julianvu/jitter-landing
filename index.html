@@ -16,7 +16,7 @@
 
   <body id="home">
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+    <nav id="main-nav" class="navbar navbar-expand-md navbar-dark fixed-top">
       <div class="container">
         <a href="#home" class="navbar-brand">
           <img
@@ -130,7 +130,7 @@
     </section>
 
     <!-- MENU -->
-    <secion id="menu">
+    <section id="menu">
       <div class="container">
         <div class="row">
           <div class="col">
@@ -203,7 +203,7 @@
           </div>
         </div>
       </div>
-    </secion>
+    </section>
 
     <!-- BARISTAS -->
     <section id="baristas" class="py-5">
@@ -310,6 +310,49 @@
       </div>
     </section>
 
+    <footer id="main-footer" class="py-5 bg-primary text-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mr-auto text-left">
+            <p class="lead">Jitter Cafe</p>
+            <p>1287 Maple Street</p>
+            <p>Huntington Beach, CA 92649</p>
+            <p>714-377-2217</p>
+          </div>
+          <div class="col-md-6 ml-auto text-right">
+            <p>Copyright &copy; <span id="year"></span> Julian Vu</p>
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <i class="fab fa-facebook-f fa-lg"></i>
+              </li>
+              <li class="list-inline-item">
+                <i class="fab fa-twitter fa-lg"></i>
+              </li>
+              <li class="list-inline-item">
+                <i class="fab fa-instagram fa-lg"></i>
+              </li>
+            </ul>
+            <p>
+              <a
+                target="_blank"
+                href="https://icons8.com/icons/set/hot-coffee--v1"
+                >Hot Coffee icon</a
+              >
+              icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+            </p>
+            <p>
+              Comment Illustration by
+              <a href="https://icons8.com/illustrations/style--abstract"
+                >Icons 8</a
+              >
+              from <a href="https://icons8.com/">Icons8</a>
+            </p>
+            <p>Other images retrieved from Pexels</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <script
       src="https://code.jquery.com/jquery-3.5.1.min.js"
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
@@ -321,6 +364,35 @@
     <script>
       // Get the current year for the copyright
       $("#year").text(new Date().getFullYear());
+
+      var offsetHeight = $("#main-nav").innerHeight();
+
+      $("body").scrollspy({
+        target: "#main-nav",
+        offset: offsetHeight,
+      });
+
+      $("#main-nav a").on("click", function (event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+
+          const hash = this.hash;
+
+          $("html, body").animate(
+            {
+              scrollTop: $(hash).offset().top - offsetHeight + 1,
+            },
+            800,
+            function () {
+              if (history.pushState) {
+                history.pushState(null, null, hash);
+              } else {
+                window.location.hash = hash;
+              }
+            }
+          );
+        }
+      });
     </script>
   </body>
 </html>
