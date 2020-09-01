@@ -1,7 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap");
 @import "../scss/bootstrap.scss";
 
-html {
-  font-family: "Montserrat", sans-serif;
-  font-family: "Raleway", sans-serif;
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.jumbotron {
+    background-image: url("../img/coffee-shop-background.jpg");
+    background-size: cover;
+}
+
+p.lead {
+    font-family: "Raleway", sans-serif;
+}
+
+#about {
+    background: #e2c391;
 }

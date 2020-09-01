@@ -10800,7 +10800,19 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
-html {
+body {
   font-family: "Montserrat", sans-serif;
+}
+
+.jumbotron {
+  background-image: url("../img/coffee-shop-background.jpg");
+  background-size: cover;
+}
+
+p.lead {
   font-family: "Raleway", sans-serif;
+}
+
+#about {
+  background: #e2c391;
 }
