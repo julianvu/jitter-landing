@@ -10893,6 +10893,6 @@ footer a {
     margin-bottom: 1rem;
   }
   #main-footer .text-right {
-    text-align: left;
+    text-align: left !important;
   }
 }
