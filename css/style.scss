@@ -84,15 +84,20 @@ footer {
 }
 
 @media (max-width: 500px) {
+}
+
+@media (max-width: 768px) {
   .jumbotron {
     h1 {
       font-size: 4rem;
     }
   }
-}
 
-@media (max-width: 768px) {
   .mb-resp {
     margin-bottom: 1rem;
+  }
+
+  #main-footer .text-right {
+    text-align: left;
   }
 }
